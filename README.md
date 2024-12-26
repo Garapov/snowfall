@@ -39,10 +39,27 @@ snowfall.start();
 
 ### Using UMD Bundle (Direct Browser Usage)
 
-You can include the library directly in your HTML using a script tag:
+You can include the library directly in your HTML using one of these methods:
+
+#### Using CDN
 
 ```html
-<script src="path/to/snowfall.umd.min.js"></script>
+<!-- Production (minified) -->
+<script src="https://cdn.jsdelivr.net/gh/Garapov/snowfall@main/dist/snowfall.umd.min.js"></script>
+
+<!-- Development (unminified) -->
+<script src="https://cdn.jsdelivr.net/gh/Garapov/snowfall@main/dist/snowfall.umd.js"></script>
+```
+
+#### Download Source
+
+You can download the latest release (v1.2.1) directly:
+- [Download Source Code (zip)](https://github.com/Garapov/snowfall/archive/refs/tags/v1.2.1.zip)
+
+After downloading, include the library in your HTML:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/Garapov/snowfall@main/dist/snowfall.umd.min.js"></script>
 ```
 
 Then use it in your JavaScript:
@@ -55,7 +72,7 @@ snowfall.start();
 
 For development, you can use the unminified version:
 ```html
-<script src="path/to/snowfall.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Garapov/snowfall@main/dist/snowfall.umd.js"></script>
 ```
 
 ### HTML Setup
