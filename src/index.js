@@ -110,8 +110,7 @@ export class SnowfallCanvas {
         const { width, height } = this.canvas;
         const { wind } = this.options;
         
-        this.ctx.fillStyle = '#1a1a1a';
-        this.ctx.fillRect(0, 0, width, height);
+        this.ctx.clearRect(0, 0, width, height);
         
         // Update and draw in a single loop
         for (let i = 0; i < this.snowflakes.length; i++) {
