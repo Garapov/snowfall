@@ -59,7 +59,7 @@ You can download the latest release (v1.2.1) directly:
 After downloading, include the library in your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Garapov/snowfall@main/dist/snowfall.umd.min.js"></script>
+<script src="path/to/snowfall.umd.min.js"></script>
 ```
 
 Then use it in your JavaScript:
@@ -72,7 +72,7 @@ snowfall.start();
 
 For development, you can use the unminified version:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Garapov/snowfall@main/dist/snowfall.umd.js"></script>
+<script src="path/to/snowfall.umd.js"></script>
 ```
 
 ### HTML Setup
