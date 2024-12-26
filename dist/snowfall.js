@@ -230,5 +230,5 @@ class SnowfallCanvas {
     }
 }
 
-export { SnowfallCanvas };
+export { SnowfallCanvas as default };
 //# sourceMappingURL=snowfall.js.map

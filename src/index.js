@@ -1,6 +1,6 @@
 import { Snowflake } from './snowflake';
 
-export class SnowfallCanvas {
+class SnowfallCanvas {
     constructor(canvas, options = {}) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d', { alpha: true }); // Enable transparent background
@@ -188,3 +188,5 @@ export class SnowfallCanvas {
         }
     }
 }
+
+export default SnowfallCanvas;

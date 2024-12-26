@@ -22,7 +22,7 @@ npm install canvas-snowfall
 
 ## Usage
 
-### Basic Setup
+### Using ES Modules
 
 ```javascript
 import { SnowfallCanvas } from 'canvas-snowfall';
@@ -35,6 +35,27 @@ const snowfall = new SnowfallCanvas(canvas);
 
 // Start the animation
 snowfall.start();
+```
+
+### Using UMD Bundle (Direct Browser Usage)
+
+You can include the library directly in your HTML using a script tag:
+
+```html
+<script src="path/to/snowfall.umd.min.js"></script>
+```
+
+Then use it in your JavaScript:
+
+```javascript
+const canvas = document.getElementById('snowfall');
+const snowfall = new SnowfallCanvas(canvas);
+snowfall.start();
+```
+
+For development, you can use the unminified version:
+```html
+<script src="path/to/snowfall.umd.js"></script>
 ```
 
 ### HTML Setup

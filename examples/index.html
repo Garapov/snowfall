@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snowfall Example</title>
+    <script src="../dist/snowfall.umd.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -63,8 +64,7 @@
         </label>
     </div>
 
-    <script type="module">
-        import { SnowfallCanvas } from '../dist/snowfall.js';
+    <script>
 
         const canvas = document.getElementById('snowfall');
         const snowfall = new SnowfallCanvas(canvas, {

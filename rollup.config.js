@@ -15,6 +15,21 @@ export default [
                 format: 'es',
                 plugins: [terser()],
                 sourcemap: true
+            },
+            {
+                file: 'dist/snowfall.umd.js',
+                format: 'umd',
+                name: 'SnowfallCanvas',
+                exports: 'default',
+                sourcemap: true
+            },
+            {
+                file: 'dist/snowfall.umd.min.js',
+                format: 'umd',
+                name: 'SnowfallCanvas',
+                exports: 'default',
+                plugins: [terser()],
+                sourcemap: true
             }
         ],
         plugins: [
