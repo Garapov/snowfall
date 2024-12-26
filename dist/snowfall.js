@@ -43,7 +43,7 @@ class Snowflake {
 class SnowfallCanvas {
     constructor(canvas, options = {}) {
         this.canvas = canvas;
-        this.ctx = canvas.getContext('2d', { alpha: false }); // Optimize for non-transparent background
+        this.ctx = canvas.getContext('2d', { alpha: true }); // Enable transparent background
         
         // Default options
         this.options = {
