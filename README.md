@@ -10,6 +10,10 @@ A lightweight and customizable HTML5 Canvas-based snowfall animation library. Cr
 - 📱 Responsive and mobile-friendly
 - 🎯 Easy to integrate with any web project
 
+## Live Demo
+
+Check out the live demo of the snowfall effect here: [Example Page](https://garapov.github.io/snowfall/examples/index.html)
+
 ## Installation
 
 ```bash
