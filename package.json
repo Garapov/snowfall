@@ -1,6 +1,6 @@
 {
   "name": "canvas-snowfall",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A lightweight HTML5 Canvas snowfall animation library",
   "main": "dist/snowfall.js",
   "module": "src/index.js",
