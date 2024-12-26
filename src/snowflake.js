@@ -1,9 +1,10 @@
 export class Snowflake {
-    constructor(x, y, radius, speed, wind) {
+    constructor(x, y, radius, speed, wind, color = 'white') {
         // Store initial properties for reuse
         this.initialX = x;
         this.initialRadius = radius;
         this.initialSpeed = speed;
+        this.color = color;
         
         // Current state
         this.x = x;
@@ -29,7 +30,7 @@ export class Snowflake {
         // Use optimized circle drawing
         ctx.beginPath();
         ctx.arc(this.x | 0, this.y | 0, this.radius, 0, 6.283); // 6.283 ≈ 2 * Math.PI, avoid calculation
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = this.color;
         ctx.fill();
     }
 

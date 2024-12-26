@@ -1,9 +1,10 @@
 class Snowflake {
-    constructor(x, y, radius, speed, wind) {
+    constructor(x, y, radius, speed, wind, color = 'white') {
         // Store initial properties for reuse
         this.initialX = x;
         this.initialRadius = radius;
         this.initialSpeed = speed;
+        this.color = color;
         
         // Current state
         this.x = x;
@@ -29,7 +30,7 @@ class Snowflake {
         // Use optimized circle drawing
         ctx.beginPath();
         ctx.arc(this.x | 0, this.y | 0, this.radius, 0, 6.283); // 6.283 ≈ 2 * Math.PI, avoid calculation
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = this.color;
         ctx.fill();
     }
 
@@ -98,7 +99,7 @@ class SnowfallCanvas {
     }
 
     createSnowflake(x = null, y = null) {
-        const { minRadius, maxRadius, minSpeed, maxSpeed, wind } = this.options;
+        const { minRadius, maxRadius, minSpeed, maxSpeed, wind, color } = this.options;
         
         const radius = Math.random() * (maxRadius - minRadius) + minRadius;
         // Calculate speed based on radius - bigger snowflakes fall faster
@@ -108,7 +109,7 @@ class SnowfallCanvas {
         x = x ?? Math.random() * this.canvas.width;
         y = y ?? Math.random() * -this.canvas.height;
 
-        return new Snowflake(x, y, radius, speed, wind);
+        return new Snowflake(x, y, radius, speed, wind, color);
     }
 
     resize() {
@@ -217,6 +218,13 @@ class SnowfallCanvas {
         if (newOptions.wind !== undefined) {
             this.snowflakes.forEach(snowflake => {
                 snowflake.wind = wind;
+            });
+        }
+
+        // Update color for all snowflakes if color changes
+        if (newOptions.color !== undefined) {
+            this.snowflakes.forEach(snowflake => {
+                snowflake.color = this.options.color;
             });
         }
     }

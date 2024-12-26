@@ -58,7 +58,7 @@ export class SnowfallCanvas {
     }
 
     createSnowflake(x = null, y = null) {
-        const { minRadius, maxRadius, minSpeed, maxSpeed, wind } = this.options;
+        const { minRadius, maxRadius, minSpeed, maxSpeed, wind, color } = this.options;
         
         const radius = Math.random() * (maxRadius - minRadius) + minRadius;
         // Calculate speed based on radius - bigger snowflakes fall faster
@@ -68,7 +68,7 @@ export class SnowfallCanvas {
         x = x ?? Math.random() * this.canvas.width;
         y = y ?? Math.random() * -this.canvas.height;
 
-        return new Snowflake(x, y, radius, speed, wind);
+        return new Snowflake(x, y, radius, speed, wind, color);
     }
 
     resize() {
@@ -177,6 +177,13 @@ export class SnowfallCanvas {
         if (newOptions.wind !== undefined) {
             this.snowflakes.forEach(snowflake => {
                 snowflake.wind = wind;
+            });
+        }
+
+        // Update color for all snowflakes if color changes
+        if (newOptions.color !== undefined) {
+            this.snowflakes.forEach(snowflake => {
+                snowflake.color = this.options.color;
             });
         }
     }
